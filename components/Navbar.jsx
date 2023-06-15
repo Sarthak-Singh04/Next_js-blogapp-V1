@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from "./navbar.module.css"
+import Darkmoddle from './darkmoddle'
 const links=[
     {
         id:1,
@@ -42,6 +43,7 @@ const Navbar = () => {
     <div className={styles.container}>
         <Link href="/" className={styles.logo}>Slocasy</Link>
         <div className={styles.links}>
+        <Darkmoddle/>
             {
                 links.map(link=>(
                     <Link href={link.url} key={link.id} className={styles.link}>{link.title}</Link>
